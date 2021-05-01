@@ -36,7 +36,7 @@ body{
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <title>Deponses</title>
+  <title>Routeurs</title>
 </head>
 <body>
 <?php
@@ -44,25 +44,25 @@ body{
 <!--form ------------------------------------------------>
 <form class="needs-validation" novalidate>
   <fieldset>
-  <h3>Espace de dépenses</h3> <br>
+  <h3>Espace de Routeur :</h3> <br>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip01">l'année :</label>
-      <input type="text" class="form-control" id="validationTooltip01" placeholder="l'année ?" value="" required>
+      <label for="validationTooltip01">Nom de client :</label>
+      <input type="text" class="form-control" id="validationTooltip01" placeholder="Nom  ?" value="" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip02">Mois :</label>
-      <input type="text" class="form-control" id="validationTooltip02" placeholder="Mois ?" value="" required>
+      <label for="validationTooltip02">CIN de client :</label>
+      <input type="text" class="form-control" id="validationTooltip02" placeholder="Cin ?" value="" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltipUsername">ID de Produit</label>
-      <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Entre id.." value="" required>
+      <label for="validationTooltipUsername">N-télé de client :</label>
+      <input type="text" class="form-control" id="validationTooltipUsername" placeholder="N-télé ?" value="" required>
         <div class="invalid-tooltip">
           Please choose a unique and valid username.
         </div>
@@ -71,14 +71,19 @@ body{
   </div>
   <div class="form-row">
     <div class="col-md-3 mb-3">
-      <label for="validationTooltip05">Quantité :</label>
-      <input type="text" class="form-control" id="validationTooltip05" placeholder="quantité ?" required>
+      <label for="validationTooltip05">Fix de client :</label>
+      <input type="number" class="form-control" id="validationTooltip05" placeholder="Fix ?" required>
+      
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationTooltip05">Nom de magazine :</label>
+      <input type="text" class="form-control" id="validationTooltip05" placeholder="Nom de magazine ?" required>
     </div>
     <button class="btn btn-primary" type="submit">Ajoute</button>
   </div>
-  
-</form>
   </fieldset>
+</form>
+  
   
   
 </body>

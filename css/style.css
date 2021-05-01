@@ -1,0 +1,17 @@
+*{
+	margin: 0%;
+}
+form{
+	width: 60%;
+  height: 190px;
+  position:absolute;
+  margin-top: 200px;
+  margin-left: 360px;
+}
+.cate{
+  width: 60%;
+  height: 190px;
+  position:absolute;
+  margin-top: 290px;
+  margin-left: 640px;
+}
