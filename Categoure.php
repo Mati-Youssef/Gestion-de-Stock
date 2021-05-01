@@ -24,8 +24,8 @@
       </div>
     </div>
     
-    </div>
-  </div>
+   </div>
+  
   <div class="form-row">
     <button class="btn btn-primary" type="submit">Ajoute</button>
   </div>

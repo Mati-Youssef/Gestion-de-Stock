@@ -1,12 +1,9 @@
 *{
 	margin: 0%;
 }
-form{
-	width: 60%;
-  height: 190px;
-  position:absolute;
-  margin-top: 200px;
-  margin-left: 360px;
+td{
+  border-bottom:2px solid black;
+  color: black;
 }
 .cate{
   width: 60%;
@@ -14,4 +11,20 @@ form{
   position:absolute;
   margin-top: 290px;
   margin-left: 640px;
+}
+form{
+  width: 60%;
+  height: 190px;
+  position:absolute;
+  margin-top: 200px;
+  margin-left: 360px;
+}
+body{
+  background-image: url('');
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
