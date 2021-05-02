@@ -1,3 +1,29 @@
+<?php 
+
+ include("connexion_PDO.php"); ?>
+
+<?php 
+
+ @$id_de_client=$_POST["id_de_client"];
+ @$id_de_user=$_POST["id_de_user"];
+ @$date_de_sortie=$_POST["date_de_sortie"];
+ @$id_de_preduit=$_POST["id_de_preduit"];
+ @$Prix=$_POST["Prix"];
+ @$quantité=$_POST["quantité"];
+ @$valider=$_POST["valider"];
+
+if (isset($valider)) {
+    
+    $req="INSERT INTO sortie(id_de_preduit,id_de_user,id_de_client,Prix_de_sortie,quantité,date_de_sortie) VALUES(?,?,?,?,?,?)";
+    $insert=$conn->prepare($req); 
+    $insert->execute(array($id_de_preduit,$id_de_user,$id_de_client,$Prix,$quantité,$date_de_sortie));
+    $conn=NULL;
+ 
+} ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,37 +42,43 @@
    <title>Sortie</title>
 </head>
 <body>
+
   <div class="form" style="">
 
 
 <form method="post" action="">
   <table><tr> <td><h1>les Sorties :</h1></td></tr></table>
   <div class="form-row">
-    <div class="col-md-4 mb-3">
- 
-      <label for="validationServer01">ID de sortie</label>
-      <input type="text"  name="id_de_sortie" class="form-control" id="validationServer01" placeholder="ID de client" value="" required>
+    
 
-      
-    </div>
      <div class="col-md-4 mb-3">
+
       <label for="validationServer01">ID de produit</label>
       <input type="text" name="id_de_preduit" class="form-control" id="validationServer01" placeholder="ID de produit" value="" required>
       
-    </div>
+     </div>
 
     
      <div class="col-md-4 mb-3">
       <label for="validationServer01">ID de User</label>
       <input type="text" name="id_de_user" class="form-control" id="validationServer01" placeholder="ID de user" value="" required>
       
-    </div></div>
+     </div>
+     <div class="col-md-4 mb-3">
+      
+      <label for="validationServer03">quantité</label>
+      <input type="number"  class="form-control" name="quantité"  id="validationServer03" placeholder="quantité"  required>
+      
+    </div>
+
+
+   </div>
     
 
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationServer01">id de client</label>
-      <input type="text" name="Nom_de_preduit" class="form-control" id="validationServer01" placeholder="Nom de preduit" value="" required>
+      <input type="text" name="id_de_client" class="form-control" id="validationServer01" placeholder="Nom de preduit" value="" required>
       
     </div>
 
@@ -54,7 +86,7 @@
     <div class="col-md-4 mb-3">
       <label for="validationServer02">date de sortie</label>
            
-      <input type="date" name="date_sortie" class="form-control" id="validationServer02" placeholder="date de sortie"  required>
+      <input type="date" name="date_de_sortie" class="form-control" id="validationServer02" placeholder="date de sortie"  required>
      </div>
    
      <div class="col-md-4 mb-3">
@@ -70,12 +102,7 @@
   </div>
   <div class="form-row">
    
-       <div class="col-md-3 mb-3">
-      
-      <label for="validationServer03">quantité</label>
-      <input type="number"  class="form-control" name="quantité"  id="validationServer03" placeholder="quantité"  required>
-      
-    </div>
+       
       
   <div class="col-md-3 mb-3"><br>
     <input class="btn btn-primary" name="valider" type="submit" value="Enregistrer">

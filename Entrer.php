@@ -1,3 +1,25 @@
+<?php 
+  include("connexion_PDO.php"); ?>
+
+<?php 
+ @$id_de_categourie=$_POST["id_de_categourie"];
+ @$Nom_de_preduit=$_POST["Nom_de_preduit"];
+ @$date_d_entrer=$_POST["date_d_entrer"];
+ @$date_d_expiration=$_POST["date_d_expiration"];
+ @$Prix=$_POST["Prix"];
+ @$quantité=$_POST["quantité"];
+ @$valider=$_POST["valider"];
+
+if (isset($valider)) {
+    
+    $req="INSERT INTO entrer(id_de_categourie,nom_de_preduit,date_d_entrer,date_d_experation,quantité,Prix) VALUES(?,?,?,?,?,?)";
+    $insert=$conn->prepare($req); 
+    $insert->execute(array($id_de_categourie,$Nom_de_preduit,$date_d_entrer,$date_d_expiration,$quantité,$Prix));
+    $conn=NULL;
+ 
+}
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,13 +49,8 @@
 
  <div class="form-row">
          <div class="col-md-4 mb-3">
-                    <label for="validationServer01">ID de client</label>
-                    <input type="text" name="id_de_client" class="form-control" id="validationServer01" placeholder="ID de client" value="" required>
-      
-         </div>
-         <div class="col-md-4 mb-3">
-              <label for="validationServer01">ID de produit</label>
-              <input type="text" name="id_de_preduit" class="form-control" id="validationServer01" placeholder="ID de produit" value="" required>
+                    <label for="validationServer01">ID de categourie</label>
+                    <input type="text" name="id_de_categourie" class="form-control" id="validationServer01" placeholder="ID de categourie" value="" required>
       
          </div>
 
@@ -42,38 +59,40 @@
               <input type="text" name="Nom_de_preduit" class="form-control" id="validationServer01" placeholder="Nom de preduit" value="" required>
       
          </div>
+         <div class="col-md-4 mb-3">
+                          <label for="validationServer03">quantité</label>
+                          <input type="number" class="form-control" name="quantité"  placeholder="quantité"   required>
+         </div>
    </div> 
    <div class="form-row">     
              
                    <div class="col-md-4 mb-3">
                         <label for="validationServer02">data d'entrer</label>   
-                        <input type="date" name="dat_entrer" class="form-control"  placeholder="data d'entrer"  required>
+                        <input type="date" name="date_d_entrer" class="form-control"  placeholder="data d'entrer"  required>
                     </div>
                     
                     <div class="col-md-4 mb-3">
                          <label for="validationServerUsername">date d'expiration</label>
-                         <input type="date"  name="date_expiration" class="form-control"  placeholder="date d'expiration" aria-describedby="inputGroupPrepend3" required>
+                         <input type="date"  name="date_d_expiration" class="form-control"  placeholder="date d'expiration" aria-describedby="inputGroupPrepend3" required>
        
                     </div>
-                     
-         
- 
-                   <div class="col-md-4 mb-3">
-                          <label for="validationServer03">quantité</label>
-                          <input type="number" class="form-control" name="quantité"  placeholder="quantité"   required>
-                   </div>
-      </div>
-  <div class="form-row"> 
-                   <div class="col-md-4 mb-3">
+                    <div class="col-md-4 mb-3">
                          <label for="validationServer04">Prix</label>
                          <div class="input-group">
-    	                       <div class="input-group-prepend">
+                             <div class="input-group-prepend">
                                  <span class="input-group-text" id="inputGroupPrepend3">DH</span>
                               </div>
-                            <input type="number" name="Prix" class="form-control" id="validationServer04" placeholder="Prix" required>
+                            <input type="text" name="Prix" class="form-control" id="validationServer04" placeholder="Prix" required>
            
                           </div>
                    </div>
+                     
+         
+ 
+                   
+      </div>
+  <div class="form-row"> 
+                   
 
   
             <div class="col-md-4 mb-3"><br>
