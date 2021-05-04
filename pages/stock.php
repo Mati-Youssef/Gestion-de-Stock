@@ -26,11 +26,12 @@ body{
   background-size: cover;
   position: relative;
 }
+
 .btn{
-  width: 90px;
-  height: 45px;
-  margin-top: 28px;
-  margin-left: 90px;
+  width: 150px;
+  height: 35px;
+  margin-top: 32px;
+  margin-left: 5px;
 }
   </style>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -42,7 +43,7 @@ body{
 <?php
 ?>
 <!--form ------------------------------------------------>
-<form class="needs-validation" novalidate>
+<form method="post" action="" class="needs-validation" novalidate>
   <fieldset>
   <h3>Stock :</h3> <br>
   

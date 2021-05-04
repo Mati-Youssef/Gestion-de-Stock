@@ -1,3 +1,27 @@
+<?php 
+  include("connexion_PDO.php"); ?>
+
+<?php 
+ @$dreteur=$_POST["dreteur"];
+ @$idclient=$_POST["idclient"];
+ @$idproduit=$_POST["idproduit"];
+ @$quantité=$_POST["quantité"];
+ //@$idreteur=$_POST["idreteur"];
+ @$valider=$_POST["valider"];
+
+if (isset($valider)) {
+    
+    $req="INSERT INTO reteur(dreteur,idclient,idproduit,quantité) VALUES(?,?,?,?,?,?)";
+    $insert=$conn->prepare($req); 
+    $insert->execute(array($dreteur,$idclient,$idproduit,$quantité));
+    $conn=NULL;
+ 
+}
+
+ ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,10 +51,10 @@ body{
   position: relative;
 }
 .btn{
-  width: 90px;
-  height: 45px;
-  margin-top: 28px;
-  margin-left: 90px;
+  width: 150px;
+  height: 35px;
+  margin-top: 32px;
+  margin-left: 5px;
 }
   </style>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -42,27 +66,27 @@ body{
 <?php
 ?>
 <!--form ------------------------------------------------>
-<form class="needs-validation" novalidate>
+<form method="post" action="" class="needs-validation" novalidate>
   <fieldset>
   <h3>Espace de Routeur :</h3> <br>
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationTooltip01">Date de Routeur :</label>
-      <input type="Date" class="form-control" id="validationTooltip01" placeholder="Date de Routeur ?" value="" required>
+      <input type="Date" class="form-control" name="dreteur" placeholder="Date de Routeur ?" value="" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationTooltip02">ID Client  :</label>
-      <input type="text" class="form-control" id="validationTooltip02" placeholder="Entre id .." value="" required>
+      <input type="text" class="form-control" name="idclient" placeholder="Entre id .." value="" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationTooltipUsername">ID de Produit</label>
-      <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Entre id.." value="" required>
+      <input type="text" class="form-control" name="idproduit" placeholder="Entre id.." value="" required>
         <div class="invalid-tooltip">
           Please choose a unique and valid username.
         </div>
@@ -70,11 +94,11 @@ body{
     </div>
   </div>
   <div class="form-row">
-    <div class="col-md-3 mb-3">
+    <div class="col-md-4 mb-3">
       <label for="validationTooltip05">Quantité :</label>
-      <input type="text" class="form-control" id="validationTooltip05" placeholder="quantité ?" required>
+      <input type="text" class="form-control" name="quantité" placeholder="quantité ?" required>
     </div>
-    <button class="btn btn-primary" type="submit">Ajoute</button>
+    <input value="Ajoute" name="valider" class="btn btn-primary" type="submit">
   </div>
   </fieldset>
 </form>
