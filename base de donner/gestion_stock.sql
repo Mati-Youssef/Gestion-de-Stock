@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2021 at 01:36 AM
+-- Generation Time: May 06, 2021 at 12:42 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -20,6 +20,23 @@ SET time_zone = "+00:00";
 --
 -- Database: `gestion_stock`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `catégorie`
+--
+
+CREATE TABLE `catégorie` (
+  `nom_catégorie` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `catégorie`
+--
+
+INSERT INTO `catégorie` (`nom_catégorie`) VALUES
+('mouad');
 
 -- --------------------------------------------------------
 
@@ -42,6 +59,19 @@ CREATE TABLE `client` (
 
 INSERT INTO `client` (`id_client`, `nom_prenom`, `cin`, `N_télé`, `N_fix`, `nom_de_magazine`) VALUES
 (1, 'khalid fifel', 'PA248450', 649459004, 2147483647, 'ward dades');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dépenses`
+--
+
+CREATE TABLE `dépenses` (
+  `année` int(10) NOT NULL,
+  `mois` varchar(20) NOT NULL,
+  `id_produit` int(40) NOT NULL,
+  `quantité` int(40) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -69,6 +99,26 @@ INSERT INTO `entrer` (`id_de_preduit`, `id_de_categourie`, `nom_de_preduit`, `da
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `reteur`
+--
+
+CREATE TABLE `reteur` (
+  `date_reteur` date NOT NULL,
+  `id_client` int(40) NOT NULL,
+  `id_produit` int(40) NOT NULL,
+  `quantité` int(40) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `reteur`
+--
+
+INSERT INTO `reteur` (`date_reteur`, `id_client`, `id_produit`, `quantité`) VALUES
+('2021-05-07', 42, 33, 444);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sortie`
 --
 
@@ -87,7 +137,7 @@ CREATE TABLE `sortie` (
 --
 
 INSERT INTO `sortie` (`id_de_sortie`, `id_de_preduit`, `id_de_user`, `id_de_client`, `Prix_de_sortie`, `quantité`, `date_de_sortie`) VALUES
-(1, 22, 31, 21, 21222, 66, '2021-05-01');
+(758198832, 808269104, 842145844, 976827450, 1.3117222901173784e26, 1380930130, '=968-02-29');
 
 -- --------------------------------------------------------
 

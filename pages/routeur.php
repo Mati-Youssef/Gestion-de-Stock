@@ -11,7 +11,7 @@
 
 if (isset($valider)) {
     
-    $req="INSERT INTO reteur(dreteur,idclient,idproduit,quantité) VALUES(?,?,?,?,?,?)";
+    $req="INSERT INTO reteur(date_reteur,id_client,id_produit,quantité) VALUES(?,?,?,?)";
     $insert=$conn->prepare($req); 
     $insert->execute(array($dreteur,$idclient,$idproduit,$quantité));
     $conn=NULL;

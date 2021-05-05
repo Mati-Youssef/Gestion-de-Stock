@@ -1,3 +1,26 @@
+<?php 
+  include("connexion_PDO.php"); ?>
+
+<?php 
+ @$année=$_POST["année"];
+ @$Mois=$_POST["Mois"];
+ @$idproduit=$_POST["idproduit"];
+ @$quantité=$_POST["quantité"];
+ 
+ @$valider=$_POST["valider"];
+
+if (isset($valider)) {
+    
+    $req="INSERT INTO dépenses(année,mois,id_produit,quantité) VALUES(?,?,?,?)";
+    $insert=$conn->prepare($req); 
+    $insert->execute(array($année,$Mois,$idproduit,$quantité));
+    $conn=NULL;
+ 
+}
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,27 +65,27 @@ body{
 <?php
 ?>
 <!--form ------------------------------------------------>
-<form class="needs-validation" novalidate>
+<form method="post" action="" class="needs-validation" novalidate>
   <fieldset>
   <h3>Espace de dépenses</h3> <br>
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationTooltip01">l'année :</label>
-      <input type="text" class="form-control" id="validationTooltip01" placeholder="l'année ?" value="" required>
+      <input type="text" class="form-control" name="année" placeholder="l'année ?" value="" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationTooltip02">Mois :</label>
-      <input type="text" class="form-control" id="validationTooltip02" placeholder="Mois ?" value="" required>
+      <input type="text" class="form-control" name="Mois" placeholder="Mois ?" value="" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationTooltipUsername">ID de Produit</label>
-      <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Entre id.." value="" required>
+      <input type="text" class="form-control" name="idproduit" placeholder="Entre id.." value="" required>
         <div class="invalid-tooltip">
           Please choose a unique and valid username.
         </div>
@@ -72,9 +95,9 @@ body{
   <div class="form-row">
     <div class="col-md-3 mb-3">
       <label for="validationTooltip05">Quantité :</label>
-      <input type="text" class="form-control" id="validationTooltip05" placeholder="quantité ?" required>
+      <input type="number" class="form-control" name="quantité" placeholder="quantité ?" required>
     </div>
-    <button class="btn btn-primary" type="submit">Ajoute</button>
+    <input value="Ajoute" name="valider" class="btn btn-primary" type="submit">
   </div>
   
 </form>
