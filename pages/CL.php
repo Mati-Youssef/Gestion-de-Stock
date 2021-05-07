@@ -27,6 +27,11 @@ if (isset($valider)) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- ===== BOX ICONS ===== -->
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- ===== CSS ===== -->
+<link rel="stylesheet" href="assets/css/styles.css">
   <style>
   *{
   margin: 0%;
@@ -61,9 +66,77 @@ body{
   <title>Routeurs</title>
 </head>
 <body>
-<?php
-?>
-<!-------------form ------------------------------------->
+<body id="body-pd">
+        <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+
+            <div class="header__img">
+                <img src="assets/img/perfil.jpg" alt="">
+            </div>
+        </header>
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="#" class="nav__logo">
+                        <i class='bx bx-layer nav__logo-icon'></i>
+                        <span class="nav__logo-name">Gestion de stock</span>
+                    </a>
+
+                    <div class="nav__list">
+                        <a href="#" class="nav__link active">
+                        <i class='bx bx-grid-alt nav__icon' ></i>
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-user nav__icon' ></i>
+                            <span class="nav__name">Users</span>
+                        </a>
+                        
+                        <a href="/Gestion-de-Stock/pages/Categoure.php" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon' ></i>
+                            <span class="nav__name">catégorie</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bxl-foursquare nav__icon' ></i>
+                            <span class="nav__name"> Buy</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-folder nav__icon' ></i>
+                            <span class="nav__name">Sell</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-user nav__icon' ></i>
+                            <span class="nav__name">Add customer</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-upside-down nav__icon' ></i>
+                            <span class="nav__name">Return the item</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
+                            <span class="nav__name">Expenses</span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+
+     <!-------------form ------------------------------------->
 <form class="needs-validation" action="" method="post" novalidate>
   <fieldset>
   <h3>Espace de Client :</h3> <br>
@@ -98,6 +171,11 @@ body{
   </fieldset>
 </form>
   
+ 
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+
   
   
 </body>
