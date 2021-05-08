@@ -12,7 +12,7 @@ if (isset($valider)) {
     $insert=$conn->prepare($req); 
     $insert->execute(array($ncategorie));
     $conn=NULL;
- 
+
 }
 
  ?> 
@@ -93,9 +93,9 @@ body{
                             <span class="nav__name">Dashboard</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Gestion-de-Stock/pages/user.php" class="nav__link">
                             <i class='bx bx-user nav__icon' ></i>
-                            <span class="nav__name">Users</span>
+                            <span class="nav__name">Utilisateur</span>
                         </a>
                         
                         <a href="/Gestion-de-Stock/pages/Categoure.php" class="nav__link">
@@ -103,29 +103,29 @@ body{
                             <span class="nav__name">catégorie</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Gestion-de-Stock/pages/entrer.php" class="nav__link">
                             <i class='bx bxl-foursquare nav__icon' ></i>
-                            <span class="nav__name"> Buy</span>
+                            <span class="nav__name"> Entrer</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Gestion-de-Stock/pages/sortie.php" class="nav__link">
                             <i class='bx bx-folder nav__icon' ></i>
-                            <span class="nav__name">Sell</span>
+                            <span class="nav__name">Sortie</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Gestion-de-Stock/pages/CL.php" class="nav__link">
                             <i class='bx bx-user nav__icon' ></i>
-                            <span class="nav__name">Add customer</span>
+                            <span class="nav__name">ajouter client</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Gestion-de-Stock/pages/routeur.php" class="nav__link">
                             <i class='bx bx-upside-down nav__icon' ></i>
-                            <span class="nav__name">Return the item</span>
+                            <span class="nav__name">ajouter Roteur</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Gestion-de-Stock/pages/DEPONCE.php" class="nav__link">
                             <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
-                            <span class="nav__name">Expenses</span>
+                            <span class="nav__name">Deponce</span>
                         </a>
 
                     </div>
@@ -149,6 +149,7 @@ body{
       <input type="text" class="form-control" name="ncategorie" placeholder="Nom de catégorie ?" required>
     </div>
     <input value="Ajoute" name="valider" class="btn btn-primary" type="submit">
+    
   </div>
 
 
@@ -159,6 +160,7 @@ body{
 
    </fieldset>
 </form>
+
  
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>

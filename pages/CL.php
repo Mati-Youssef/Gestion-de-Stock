@@ -91,9 +91,9 @@ body{
                             <span class="nav__name">Dashboard</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Gestion-de-Stock/pages/user.php" class="nav__link">
                             <i class='bx bx-user nav__icon' ></i>
-                            <span class="nav__name">Users</span>
+                            <span class="nav__name">Utilisateur</span>
                         </a>
                         
                         <a href="/Gestion-de-Stock/pages/Categoure.php" class="nav__link">
@@ -101,29 +101,29 @@ body{
                             <span class="nav__name">catégorie</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Gestion-de-Stock/pages/entrer.php" class="nav__link">
                             <i class='bx bxl-foursquare nav__icon' ></i>
-                            <span class="nav__name"> Buy</span>
+                            <span class="nav__name"> Entrer</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Gestion-de-Stock/pages/sortie.php" class="nav__link">
                             <i class='bx bx-folder nav__icon' ></i>
-                            <span class="nav__name">Sell</span>
+                            <span class="nav__name">Sortie</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Gestion-de-Stock/pages/CL.php" class="nav__link">
                             <i class='bx bx-user nav__icon' ></i>
-                            <span class="nav__name">Add customer</span>
+                            <span class="nav__name">ajouter client</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Gestion-de-Stock/pages/routeur.php" class="nav__link">
                             <i class='bx bx-upside-down nav__icon' ></i>
-                            <span class="nav__name">Return the item</span>
+                            <span class="nav__name">ajouter Roteur</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Gestion-de-Stock/pages/DEPONCE.php" class="nav__link">
                             <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
-                            <span class="nav__name">Expenses</span>
+                            <span class="nav__name">Deponce</span>
                         </a>
 
                     </div>
@@ -137,10 +137,10 @@ body{
         </div>
 
      <!-------------form ------------------------------------->
-<form class="needs-validation" action="" method="post" novalidate>
+<form class="needs-validation" action="" method="post" style="margin-left: 15%" novalidate>
   <fieldset>
   <h3>Espace de Client :</h3> <br>
-  <div class="form-row">
+  <div class="form-row" >
     <div class="col-md-4 mb-3">
       <label for="validationTooltip01">Nom et prenom de client :</label>
       <input type="text" name="nom" class="form-control" placeholder="Nom  ?" required>

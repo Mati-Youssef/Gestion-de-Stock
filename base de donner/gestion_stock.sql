@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2021 at 12:42 AM
+-- Generation Time: May 08, 2021 at 08:08 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -28,15 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `catégorie` (
-  `nom_catégorie` text NOT NULL
+  `nom_catégorie` text NOT NULL,
+  `id_catégorie` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `catégorie`
---
-
-INSERT INTO `catégorie` (`nom_catégorie`) VALUES
-('mouad');
 
 -- --------------------------------------------------------
 
@@ -166,6 +160,12 @@ INSERT INTO `utilisateur` (`id_user`, `nom_prenom`, `cin`, `N_télé`, `email`, 
 --
 
 --
+-- Indexes for table `catégorie`
+--
+ALTER TABLE `catégorie`
+  ADD PRIMARY KEY (`id_catégorie`);
+
+--
 -- Indexes for table `client`
 --
 ALTER TABLE `client`
@@ -192,6 +192,12 @@ ALTER TABLE `utilisateur`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `catégorie`
+--
+ALTER TABLE `catégorie`
+  MODIFY `id_catégorie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `client`
