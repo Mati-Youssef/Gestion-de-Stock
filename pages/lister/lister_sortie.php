@@ -84,7 +84,7 @@ function confirmer(v){
    
     if(res){
         
-        window.location.href="supprimer.php?id="+v+'';
+        window.location.href="supprimer/supprimer_sortie.php?id="+v+'';
 
 }
 }

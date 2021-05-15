@@ -64,7 +64,7 @@
 
 
 
-    echo "<tr><th>date_reteur</th><th>id_client</th><th>id_produit</th><th>quantité</th>";
+    echo "<tr><th>id_reteur</th><th>date_reteur</th><th>id_client</th><th>id_produit</th><th>quantité</th>";
     
    
      while ($user=$reponse->fetch()) {
@@ -72,9 +72,9 @@
 
 	 echo "<tr>";
      echo "<td>";
-	 echo $user['date_reteur']."</td><td>".$user['id_client']."</td><td>".$user['id_produit']."</td><td>".$user['quantité']."</td>";
+	 echo $user['id_reteur']."</td><td>".$user['date_reteur']."</td><td>".$user['id_client']."</td><td>".$user['id_produit']."</td><td>".$user['quantité']."</td>";
 	  ?>
-	   <td><button class="btn btn-outline-danger" onclick="confirmer(<?php echo $user[0] ?>)">supprimer</button></td>
+	   <td><button class="btn btn-outline-danger" onclick="confirmer(<?php echo $user[4] ?>)">supprimer</button></td>
 	  	<?php
      echo "<td><a  href='modifier.php?id=$user[0]'><button class=\"btn btn-outline-success\">modifier</button></a></td></tr>";
  }?>
@@ -85,7 +85,7 @@ function confirmer(v){
    
     if(res){
         
-        window.location.href="supprimer.php?id="+v+'';
+        window.location.href="supprimer/supprimer_reteur.php?id="+v+'';
 
 }
 }

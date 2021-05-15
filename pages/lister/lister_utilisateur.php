@@ -55,7 +55,7 @@
    
     <?php 
     
-    echo "<tr><th>nom_prenom</th><th>cin</th><th>mot de passe </th><th>email</th><th>Numéro de téléphone</th></tr>";
+    echo "<tr><th>id_user</th><th>nom_prenom</th><th>cin</th><th>mot de passe </th><th>email</th><th>Numéro de téléphone</th></tr>";
     
    
      while ($user=$reponse->fetch()) {
@@ -63,12 +63,26 @@
 
 	 echo "<tr>";
      echo "<td>";
-	 echo $user['nom_prenom']."</td><td>".$user['cin']."</td><td>".$user['passwd']."</td><td>".$user['email']."</td><td>".$user['N_télé']."</td>";
+	 echo $user['id_user']."</td><td>".$user['nom_prenom']."</td><td>".$user['cin']."</td><td>".$user['passwd']."</td><td>".$user['email']."</td><td>".$user['N_télé']."</td>";
 	  ?>
 	   <td><button class="btn btn-outline-danger" onclick="confirmer(<?php echo $user[0] ?>)">supprimer</button></td>
 	  	<?php
      echo "<td><a  href='modifier.php?id=$user[0]'><button class=\"btn btn-outline-success\">modifier</button></a></td></tr>";
  }?>
+ <script type="text/javascript">
+  	
+function confirmer(v){
+    var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+   
+    if(res){
+        
+        window.location.href="supprimer/supprimer_utilisateur.php?id="+v+'';
+
+}
+}
+
+
+  </script>
  <!--===== MAIN JS =====-->
         <script src="../assets/js/main.js"></script>
 

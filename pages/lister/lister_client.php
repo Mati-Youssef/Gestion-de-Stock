@@ -56,16 +56,6 @@
     <?php 
 
 
-  
-
-
-
-
-
-
-  
-
-
 
 
     echo "<tr><th>id_client</th><th>nom_prenom</th><th>cin</th><th>N_télé</th><th>N_fix</th><th>nom_de_magazine</th></tr>";
@@ -80,7 +70,7 @@
     ?>
      <td><button class="btn btn-outline-danger" onclick="confirmer(<?php echo $user[0] ?>)">supprimer</button></td>
       <?php
-     echo "<td><a  href='modifier.php?id=$user[0]'><button class=\"btn btn-outline-success\">modifier</button></a></td></tr>";
+     echo "<td><a  href='modifier/modifier_client.php?id=$user[0]'><button class=\"btn btn-outline-success\">modifier</button></a></td></tr>";
  }?>
 <script type="text/javascript">
     
@@ -89,7 +79,7 @@ function confirmer(v){
    
     if(res){
         
-        window.location.href="supprimer.php?id="+v+'';
+        window.location.href="supprimer/supprimer_client.php?id="+v+'';
 
 }
 }
