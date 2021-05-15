@@ -40,6 +40,7 @@ body{
   <title>Routeurs</title>
 </head>
 <body>
+  <?php include('../include/head.php'); ?>
 <?php
 ?>
 <!--form ------------------------------------------------>
