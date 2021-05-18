@@ -1,0 +1,23 @@
+#footer-left{
+    padding-left: 8%;
+    background-color: #0f005a;
+}
+
+#footer-right{
+    background-color: #0f005a;
+    padding-right: 8%;
+}
+
+#copyright{
+    float: left;
+    color: white
+}
+
+#footer a{
+    text-decoration: none;
+    color: white;
+}
+
+#tc{
+    float: right;
+}

@@ -1,0 +1,93 @@
+#blog, #post{
+    padding: 0 5%;
+    border-top: 2px solid darkslateblue;
+    background-color: #ebebeb;
+    padding-top: 50px;
+}
+
+#carousel img{
+    height: 500px;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+}
+
+#carousel .carousel-caption{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    margin-left: -139px;
+    margin-bottom: -20px;
+    text-align: left;
+    padding-left: 5%;
+}
+
+#latest, #allposts{
+    margin: 30px 0;
+    border-top: 5px solid #8d6dcf;
+    background-color: white;
+}
+
+#latest #heading, #allposts #heading{
+    width: 100%;
+    padding: 10px 0 0 20px;
+}
+
+#latest hr, #allposts hr{
+    padding-bottom: 10px;
+}
+
+#allposts .card-columns{
+    padding-left: 25px;
+}
+
+#latest img{
+    width: 100%;
+    height: 110px;
+    margin-bottom: 15px;
+}
+
+#latest h7{
+    color: darkgray;
+}
+
+#latest h5{
+    color: black
+}
+
+#latest h4, #allposts h4{
+    color: #8d6dcf;
+}
+
+#sidebar #recentposts, #sidebar #sponsers{
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#sidebar #recentposts #heading, #sidebar #sponsers #heading{
+    width: 100%;
+    background-color: #3e5062;
+    padding: 10px;
+    color: white;
+}
+
+#sidebar #posts img{
+    width: 100%;
+    height: 60px;
+}
+
+#sidebar #posts{
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    #sidebar{
+        display: none;
+    }
+    #carousel img{
+        height: 300px;
+    }
+    #latest .col-md-3{
+        width: 80%;
+        margin: auto;
+    }
+}

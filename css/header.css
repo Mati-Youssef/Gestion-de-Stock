@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+#topbar{
+    background-color: #0b6bd9;
+    height: 50px;
+}
+
+#topbar #trending{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    float: left;
+}
+
+#topbar div a, #search a{
+    border: 1px solid #0b6bd9;
+    background-color: #0b6bd9;
+    padding: 5px;
+    color: white;
+    margin: 5px;
+    border-radius: 5px;
+    float: left;
+}
+
+#topbar form, #search form{
+    color: white;
+    margin-right: 70px;
+}
+
+#search form{
+    float: left;
+}
+
+#topbar form{
+    float: right;
+}
+
+#topbar form input, #topbar form button, #search form input, #search form button{
+    background-color: #0b6bd9;
+    border: 1px solid #0b6bd9;
+    border-radius: 3px;
+    color: white;
+    height: 35px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+#topbar form input, #search form input{
+    width: 100px;
+}
+
+#topbar form ::placeholder, #search form ::placeholder{
+    color: white;
+}
+
+#header nav img{
+    height: 60px;
+    width: 200px;
+}
+
+#header nav #navbarSupportedContent{
+    margin-left: 19%;
+    
+}
+
+#header nav #nav-menu a{
+    color: black;
+    font-size: 16px;
+    padding-left: 15px;
+
+}
+
+#header #nav-menu a:hover, #header nav #forms a:hover{
+    color: blue;
+    text-decoration: none;
+}
+
+#header nav #forms{
+    font-size: 16px;
+    float: right;
+    margin-right: 7%;
+}
+
+#header nav #signup{
+    margin: 5px 0 0 10px;
+}
+
+#header nav #forms a{
+    color: black;
+}
+
+#header nav #search{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header nav #search{
+        display: contents;
+    }
+    #topbar div{
+        display: none;
+    }
+    #header nav #navbarSupportedContent{
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #header nav #navbarSupportedContent{
+        margin-left: 10px;
+    }
+}
+
+/*-----------login / signup-----------*/
+
+.modal input[type=text], .modal input[type=email], .modal input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.modal button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal button:hover {
+  opacity: 0.8;
+}
+
+.modal .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.modal .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.modal img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.modal .container {
+  padding: 16px;
+}
+
+.modal span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal .close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.modal .close:hover, #id01 .close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.modal .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+

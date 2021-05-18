@@ -1,0 +1,71 @@
+#mainImage img{
+    position:relative;
+    width: 100%;
+}
+
+#mainImage #text{
+    position: absolute;
+    margin-top: -310px;
+    color:white;
+    margin-left: 60%;
+    text-align: center;
+}
+
+#mainImage #text p{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#mainImage #text button{
+    border: 1px solid white;
+    border-radius: 25px;
+    margin-right: 5px;
+    background-color: #151e27;
+    margin-top: 15px;
+}
+
+#mainImage #text button a{
+    color: white;
+}
+
+#mainImage #text button a:hover{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px){
+    #mainImage #text h2{
+        font-size: 18px;
+        margin-top: 200px;
+    }
+    #mainImage #text p{
+        font-size: 14px;
+    }
+    #mainImage #text button{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px){
+    #mainImage #text h2{
+        font-size: 18px;
+    }
+    #mainImage #text p{
+        font-size: 14px;
+    }
+    #mainImage #text{
+        margin-top: -200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

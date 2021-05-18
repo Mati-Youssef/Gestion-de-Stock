@@ -1,0 +1,82 @@
+#contact #banner img{
+    position: relative;
+    width: 100%;
+}
+
+#contact #banner #text{
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin-top: -100px;
+    margin-left: 10%;
+}
+
+#contact #banner #text p{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#contact #content{
+    padding: 6% 10%;
+}
+
+#contact #content hr{
+    width: 15%;
+    border: 1px solid blue;
+    margin-bottom: 40px;
+}
+#contact #blueColor{
+    color: blue;
+    font-size: 35px;
+}
+
+#contact #content #left i{
+    font-size: 35px;
+    color: darkslateblue;
+    padding: 20px;;
+}
+
+#contact #content input, #content textarea{
+    background-color: gainsboro;
+    border: 1px solid gainsboro;
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+}
+
+#contact #content input{
+    height: 45px;
+}
+
+#contact #content #right button{
+    border: 2px solid blue;
+    border-radius: 3px;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: blue;
+    background-color: white;
+    font-family: open sans, monospace;
+    font-weight: bold;
+    float: right;
+}
+
+@media only screen and (max-width: 600px){
+    #contact #banner #text p{
+        font-size: 30px;
+        margin-top: 40px;
+    }
+    #contact #left, #contact #right{
+        padding: 50px 0 50px 0;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
