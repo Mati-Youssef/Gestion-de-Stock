@@ -41,13 +41,14 @@
 	<title></title>
 </head>
 <body id="body-pd">
+  <h1 style="border-bottom: 2px solid black; width: 43%">la liste des administrateurs :</h1><br><br>
         <?php include('../../include/head.php'); ?>
 <?php 
 
         include("../connexion_PDO.php");
-   $req="SELECT * FROM utilisateur";
+   $req1="SELECT * FROM utilisateur  ORDER BY id_user";
 
-   $reponse=$conn->query($req);
+   $reponse=$conn->query($req1);
    
     ?>
    
@@ -55,7 +56,7 @@
    
     <?php 
     
-    echo "<tr><th>id_user</th><th>nom_prenom</th><th>cin</th><th>mot de passe </th><th>email</th><th>Numéro de téléphone</th></tr>";
+    echo "<tr><th>id du l'admin</th><th>nom et prenom</th><th>CIN</th><th>mot de passe </th><th>email</th><th>Numéro de téléphone</th></tr>";
     
    
      while ($user=$reponse->fetch()) {
@@ -67,8 +68,9 @@
 	  ?>
 	   <td><button class="btn btn-outline-danger" onclick="confirmer(<?php echo $user[0] ?>)">supprimer</button></td>
 	  	<?php
-     echo "<td><a  href='modifier/modifier_utilisateur.php?id=$user[0]'><button class=\"btn btn-outline-success\">modifier</button></a></td></tr>";
- }?>
+     echo "<td><a  href='modifier/modifier_utilisateur.php?id=$user[0]'><button class=\"btn btn-outline-success\">modifier</button></a></td>";?>
+     <td><a  href='../user.php'><button class="btn btn-outline-primary">ajouter</button></a></td></tr>
+ <?php }?>
  <script type="text/javascript">
   	
 function confirmer(v){

@@ -2,5 +2,5 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: ../index.php?message=Successfully Logged Out");
+header("Location: /FPO-fifel/index.php");
 ?>

@@ -41,11 +41,12 @@
 	<title></title>
 </head>
 <body id="body-pd">
+  <h1>Liste des catégories : </h1> <br><hr>
         <?php include('../../include/head.php'); ?>
         <?php 
 
         include("../connexion_PDO.php");
-   $req="SELECT * FROM catégorie";
+   $req="SELECT * FROM catégorie ORDER BY id_catégorie";
 
    $reponse=$conn->query($req);
    
@@ -70,7 +71,10 @@
 	  ?>
 	   <td><button class="btn btn-outline-danger" onclick="confirmer(<?php echo $user[1] ?>)">supprimer</button></td>
 	  	<?php
-     echo "<td><a  href='modifier/modifier_catégorie.php?id=$user[1]'><button class=\"btn btn-outline-success\">modifier</button></a></td></tr>";
+     echo "<td><a  href='modifier/modifier_catégorie.php?id=$user[1]'><button class=\"btn btn-outline-success\">modifier</button></a></td>";?>
+     <td><a  href='../catégorie.php'><button class="btn btn-outline-primary">ajouter</button></a></td></tr>
+ <?php
+
  }?>
 <script type="text/javascript">
   	
@@ -81,11 +85,17 @@ function confirmer(v){
         
         window.location.href="supprimer/supprimer_catégorie.php?id="+v+'';
 
+    
+
+
+  
+
 }
 }
 
 
   </script>
+  
 
 <!--===== MAIN JS =====-->
         <script src="../assets/js/main.js"></script>

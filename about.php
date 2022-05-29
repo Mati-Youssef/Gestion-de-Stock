@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Viator Laptops</title>
+    <title>fpo-fifel</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -21,39 +21,39 @@
        <div id="banner">
           <img src="images/about.jpg" alt="About Image">
           <div id="text">
-              <p id="heading">About Us</p>
+              <p id="heading">A propos de nous</p>
               <hr>
-              <p>If you want to learn more about us, you’re in the right place. Read to learn how we managed to grow our business so fast.</p>
+              <p>Si vous souhhaitez en savoir plus sur nous,vous êtes au bon endroit. lire pour aprendre comment nous  avons réussi à développer notre entreprise si vite .</p>
           </div>
       </div>
       <div id="media" class="row">
           <div class="col-md-3">
               <i class="fa fa-facebook"></i>
               <h4>Facebook</h4>
-              <p>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcor.</p>
+              <p>page facebook permet de partage nos produits a vendre .</p>
           </div>
           <div class="col-md-3">
               <i class="fa fa-twitter"></i>
               <h4>Twitter</h4>
-              <p>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcor.</p>
+              <p>Sur cette plateforme y a des informations pour notre societé. </p>
           </div>
           <div class="col-md-3">
               <i class="fa fa-youtube"></i>
               <h4>Youtube</h4>
-              <p>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcor.</p>
+              <p>des vidéos pour comment gérer notre stock .</p>
           </div>
       </div>
-      <div id="story">
+      <div id="story" style="background-image: url('images/videoBackground.jpg'); height: 280px; ">
           <div id="storyText">
-              <h1>Our Story</h1>
+              <h1 style="color: white">notre statut</h1>
               <i class="fa fa-heart"></i>
               <div class="row">
-                  <div style="text-align:left" class="col-md-6"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis velit metus. Morbi non augue non sapien ullamcorper volutpat id a libero. Curabitur maximus vel est ac suscipit. Pellentesque imperdiet ultricies interdum. Nunc elementum porta tempus. In gravida nisi at dui eleifend lobortis. Vestibulum lobortis, leo at laoreet ornare, ante lectus commodo nisl, varius pellentesque velit justo eget purus. </p></div>
-                  <div style="text-align:right" class="col-md-6"><p>Nunc elementum porta tempus. In gravida nisi at dui eleifend lobortis. Vestibulum lobortis, leo at laoreet ornare, ante lectus commodo nisl, varius pellentesque velit justo eget purus.  Aliquam tortor massa, elementum at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis velit metus. Morbi non augue non sapien ullamcorper volutpat id a libero. Pellentesque imperdiet ultricies interdum.</p></div>
+                  <div style="text-align:left" class="col-md-6"><p>cette platforme permet de publier les produits disponible pour les utilisateurs </p></div>
+                  <div style="text-align:right" class="col-md-6"><p>tout utilisateur permet de demander un produit, par remplir un formulaire complitement </p></div>
               </div>
           </div>
-           <video autoplay muted loop><source src="videos/Video%20Placeholder.mp4"></video>
-           <img src="images/videoBackground.jpg" alt="">
+          
+           
       </div>
    </div>
    

@@ -67,27 +67,26 @@ body{
 }
   </style>
  
-  <title>User</title>
+  <title>les administrateurs</title>
 </head>
 <body id="body-pd">
         <?php include('../include/head.php'); ?>
   
 <!----------------------------form ----------------------------------->
-
-
 <form class="needs-validation" action="" method="post" novalidate>
   <fieldset>
-  <h1>user :</h1> <br>
+
+  <h1>ajouter un administrateur :</h1> <br>
   <div class="form-row">
     
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip02">Nom et prenom de l'utilisateur :</label>
+      <label for="validationTooltip02">Nom et prenom  :</label>
       <input type="text" name="nom" class="form-control" id="validationTooltip02" placeholder="Nom ?" value="" required>
       
     </div>
     
     <div class="col-md-4 mb-3">
-      <label for="validationTooltipUsername">CIN de l'utilisateur :</label>
+      <label for="validationTooltipUsername">CIN :</label>
       <input type="text" name="cin" class="form-control" id="validationTooltipUsername" placeholder="CIN ?" value="" required>
         
       </div>
@@ -97,7 +96,7 @@ body{
 
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip05">N-télé de l'utilisateur :</label>
+      <label for="validationTooltip05">N-télé  :</label>
       <input type="number" name="ntele" class="form-control" id="validationTooltip05" placeholder="N-télé ?" required>
             
     </div>
@@ -123,10 +122,14 @@ body{
 
     
   </div>
+  
+  <a href="lister/lister_utilisateur.php">lister les administrateurs</a>
+
+
   </fieldset>
 </form>
-  
-  
+   
+ 
   <script src="assets/js/main.js"></script>
 </body>
 </html>

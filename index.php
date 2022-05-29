@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Viator Laptops</title>
+    <title>fpo-fifel</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -18,29 +18,29 @@
    <?php include_once "includes/header.php" ?>
    
    <div id="mainImage">
-       <img id="mainImage" src="images/mainImg.png" alt="Main Image">
-       <div id="text">
-           <h2>FPO-STOCK</h2>
-           <p>The Laptops of Tomorrow</p>
-           <button style="padding: 5px 25px"><a href="about.php">About Us</a></button>
-           <button style="padding: 5px 15px"><a href="contact.php">Get A Quote</a></button>
+       <img id="mainImage" src="images/photo104.png" alt="Main Image">
+       <div id="text" style="margin-left: 160px;">
+           <p><h1 style="color:black;">FPO-FIFEL</h1>
+           </p>
+           <button style="padding: 5px 25px" ><a href="about.php" style="color:white;">A propos de nous</a></button>
+           <button style="padding: 5px 15px"><a href="contact.php" style="color:white;">Contacter nous</a></button>
        </div>
    </div>
    <div class="row" id="facts">
        <div class="col-md-4">
            <i class="fa fa-car"></i>
-           <h6>FREE SHIPPING</h6>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+           <h6>GRATUIT ACHAT </h6>
+           <p> Vous pouvez toujours damander des produits disponible sur la page de produit </p>
        </div>
        <div class="col-md-4">
            <i class="fa fa-headphones"></i>
            <h6>24/7 CONTACT SUPPORT</h6>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+           <p>nous essayons de repondre à toutes vos questions autant que possible.</p>
        </div>
        <div class="col-md-4">
            <i class="fa fa-fighter-jet"></i>
-           <h6>SAME DAY SHIPPING</h6>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+           <h6>LIVRAISON LE MÊME JOUR</h6>
+           <p>vous recevrez votre commande le même jour. </p>
            
        </div>
        <?php include_once "includes/footer.php" ?>

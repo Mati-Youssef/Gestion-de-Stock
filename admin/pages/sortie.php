@@ -43,16 +43,14 @@ if (isset($valider)) {
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <title>Sortie</title>
 </head>
-<body id="body-pd">
+<body id="body-pd" style="background-color: #cccccc">
        <?php include('../include/head.php'); ?>
   
-
-
   <div class="form" style=" margin:100px 20%">
 
 
 <form method="post" action="">
-  <table><tr> <td><h1>les Sorties :</h1></td></tr></table>
+  <table><tr> <td><h1>les achats :</h1></td></tr></table>
   <div class="form-row">
     
 
@@ -113,6 +111,7 @@ if (isset($valider)) {
     <input class="btn btn-primary" name="valider" type="submit" value="Enregistrer">
   </div>
 </div>
+<a href="/FPO-fifel/admin/pages/lister/lister_sortie.php">lister des sortis</a>
 </form>
 </div>
 

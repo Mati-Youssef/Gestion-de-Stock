@@ -9,6 +9,6 @@ $v=$_GET['id'];
  $conn->exec($req);
 
  
- header("location:../lister_reteur.php");
+ header("location:../lister_défectueux.php");
 
  ?>

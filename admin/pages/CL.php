@@ -13,7 +13,7 @@
 
 if (isset($valider)) {
     
-    $req="INSERT INTO client(nom_prenom,cin,N_télé,N_fix,nom_de_magazine) VALUES(?,?,?,?,?)";
+    $req="INSERT INTO client(nom_prenom,cin,N_télé,Email,password) VALUES(?,?,?,?,?)";
     $insert=$conn->prepare($req); 
     $insert->execute(array($nom,$cin,$ntele,$nfix,$nom_de_magazine));
     $conn=NULL;
@@ -73,11 +73,11 @@ body{
      <!-------------form ------------------------------------->
 <form class="needs-validation" action="" method="post" style="margin-left: 15%" novalidate>
   <fieldset>
-  <h3>Espace de Client :</h3> <br>
+  <h3>Ajouter un Client :</h3> <br>
   <div class="form-row" >
     <div class="col-md-4 mb-3">
       <label for="validationTooltip01">Nom et prenom de client :</label>
-      <input type="text" name="nom" class="form-control" placeholder="Nom  ?" required>
+      <input type="text" name="nom" class="form-control" placeholder="Nom et prenom  ?" required>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationTooltip02">CIN de client :</label>
@@ -91,18 +91,19 @@ body{
   </div>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip05">Fix de client :</label>
-      <input type="number" name="nfix" class="form-control" placeholder="Fix ?" required>
+      <label for="validationTooltip05">Email de client :</label>
+      <input type="email" name="nfix" class="form-control" placeholder="Email de client ?" required>
       
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip05">Nom de magazine :</label>
-      <input type="text"  class="form-control" name="nom_de_magazine" 
-       placeholder="Nom de magazine ?" required>
+      <label for="validationTooltip05">mot de passe:</label>
+      <input type="password"  class="form-control" name="nom_de_magazine" 
+       placeholder="mot de passe ?" required>
     </div>
     <input  class="btn btn-primary" name="valider" type="submit" value="Ajoute">
   </div>
   </fieldset>
+  <a href="/FPO-fifel/admin/pages/lister/lister_client.php">lister des clients</a>
 </form>
   
  

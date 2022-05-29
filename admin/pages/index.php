@@ -11,11 +11,11 @@
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <title>Sidebar menu responsive</title>
-    </head>
-    <body id="body-pd">
+    </head >
+    <body id="body-pd " style="background: url('../../images/post5.jpeg'); background-size:cover;">
        <?php include('../include/head.php'); ?>
 
-        <h1>Components</h1>
+        <h1 style="text-align: center; color: #bf1b1b; border-radius: 20px; margin-top: 20%; height: 200px; padding: auto; ">Bienvenue sur l'espace d'administrateur</h1>
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
     </body>

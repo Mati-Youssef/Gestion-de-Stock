@@ -17,7 +17,7 @@ $v=$_GET["id"];
 if (isset($valider)){
 
    $conn->exec($req1);
-   header("location:../lister_reteur.php");
+   header("location:../lister_défectueux.php");
  }
  
 

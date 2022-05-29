@@ -40,7 +40,7 @@
 
 	<title></title>
 </head>
-<body id="body-pd">
+<body id="body-pd"><h1>Liste des achats</h1><hr>
         <?php include('../../include/head.php'); ?>
         <?php 
 
@@ -56,7 +56,7 @@
     <?php 
     
 
-    echo "<tr><th>id_de_sortie</th><th>id_de_preduit</th><th>id_de_user</th><th>id_de_client</th><th>quantité</th><th>date_de_sortie</th><th>prix de sortie</th></tr>";
+    echo "<tr><th>id_de_sortie</th><th>id_de_preduit</th><th>id_de_client</th><th>quantité</th><th>date_de_sortie</th><th>prix de sortie</th></tr>";
     
    
      while ($user=$reponse->fetch()) {
@@ -64,11 +64,13 @@
 
 	 echo "<tr>";
      echo "<td>";
-	 echo $user['id_de_sortie']."</td><td>".$user['id_de_preduit']."</td><td>".$user['id_de_user']."</td><td>".$user['id_de_client']."</td><td>".$user['quantité']."</td><td>".$user['date_de_sortie']."</td><td>".$user[4];
+	 echo $user['id_de_sortie']."</td><td>".$user['id_de_preduit']."</td><td>".$user['id_de_client']."</td><td>".$user['quantité']."</td><td>".$user['date_de_sortie']."</td><td>".$user['Prix_de_sortie'];
 	  ?>
-	   <td><button class="btn btn-outline-danger" onclick="confirmer(<?php echo $user[0] ?>)">supprimer</button></td>
+	   </td><td><button class="btn btn-outline-danger" onclick="confirmer(<?php echo $user[0] ?>)">supprimer</button></td>
 	  	<?php
-     echo "<td><a  href='modifier/modifier_sortie.php?id=$user[0]'><button class=\"btn btn-outline-success\">modifier</button></a></td></tr>";
+     echo "<td><a  href='modifier/modifier_sortie.php?id=$user[0]'><button class=\"btn btn-outline-success\">modifier</button></a></td>";?>
+ <td><a  href='../sortie.php'><button class="btn btn-outline-primary">ajouter</button></a></td></tr>
+     <?php
  }?>
 <script type="text/javascript">
   	

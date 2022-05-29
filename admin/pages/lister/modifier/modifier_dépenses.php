@@ -13,14 +13,8 @@
 $v=$_GET["id"];
 ?>
 <?php 
-
-
-
-
-
-
-        
- $req1="UPDATE dépenses  SET année=\"$année\",mois=\"$Mois\",id_produit=\"$idproduit\",quantité=\"$quantité\" WHERE id_dépenses =\"$v\"";
+   
+ $req1="UPDATE dépenses  SET nom_four=\"$année\",prenom_four=\"$Mois\",cin_four=\"$quantité\",N_tele_four=\"$idproduit\" WHERE id_four =\"$v\"";
 if (isset($valider)){
 
    $conn->exec($req1);
@@ -29,7 +23,7 @@ if (isset($valider)){
  
 
 
-$req2="SELECT * FROM dépenses WHERE id_dépenses =\"$v\"";
+$req2="SELECT * FROM dépenses WHERE id_four =\"$v\"";
 
 
   ?>
@@ -69,7 +63,7 @@ body{
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../../../css/style.css">
   <!-- ===== BOX ICONS ===== -->
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
@@ -83,7 +77,7 @@ body{
 
 
 </head>
-<body id="body-pd">   
+<body id="body-pd" style="background-color:#cccccc;">   
 
         
     
@@ -96,35 +90,29 @@ body{
          while($user=$reponse->fetch()){
     
          ?>
-  <h3>Espace de dépenses</h3> <br>
+  <h3>Modifier un fournisseur</h3> <br>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip01">l'année :</label>
-      <input type="text" value=" <?php echo $user[0]; ?> " class="form-control" name="année" placeholder="l'année ?" value="" required>
-      <div class="valid-tooltip">
-        Looks good!
-      </div>
+      <label for="validationTooltip01">nom :</label>
+      <input type="text" value=" <?php echo $user[0]; ?> " class="form-control" name="année" placeholder="nom .. ?" value="" required>
+      
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip02">Mois :</label>
-      <input type="text" value=" <?php echo $user[1]; ?> " class="form-control" name="Mois" placeholder="Mois ?" value="" required>
-      <div class="valid-tooltip">
-        Looks good!
-      </div>
+      <label for="validationTooltip02">prenom :</label>
+      <input type="text" value=" <?php echo $user[1]; ?> " class="form-control" name="Mois" placeholder="prenom.. ?" value="" required>
+     
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltipUsername">ID de Produit</label>
+      <label for="validationTooltipUsername">numèro de tel</label>
       <input type="text" value=" <?php echo $user[2]; ?> " class="form-control" name="idproduit" placeholder="Entre id.." value="" required>
-        <div class="invalid-tooltip">
-          Please choose a unique and valid username.
-        </div>
+       
       </div>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip05">Quantité :</label>
-      <input type="text" value="  <?php echo $user[3]; ?> " class="form-control" name="quantité" placeholder="quantité ?" required>
+      <label for="validationTooltip05">cin :</label>
+      <input type="text" value="  <?php echo $user[3]; ?> " class="form-control" name="quantité" placeholder="cin.. ?" required>
     </div><?php } ?>
     <input id="va" value="Ajoute" name="valider" class="btn btn-primary" type="submit">
   </div>

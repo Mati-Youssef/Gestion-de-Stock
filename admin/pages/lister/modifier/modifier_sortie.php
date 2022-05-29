@@ -15,7 +15,7 @@
 
                    
 
- $req1="UPDATE sortie SET id_de_preduit=\"$id_de_preduit\",id_de_user=\"$id_de_user\",id_de_client=\"$id_de_client\",Prix_de_sortie=\"$Prix\",quantité=\"$quantité\",date_de_sortie=\"$date_de_sortie\" WHERE id_de_sortie =\"$v\"";
+ $req1="UPDATE sortie SET id_de_preduit=\"$id_de_preduit\",???id_de_user=\"$id_de_user\",id_de_client=\"$id_de_client\",Prix_de_sortie=\"$Prix\",quantité=\"$quantité\",date_de_sortie=\"$date_de_sortie\" WHERE id_de_sortie =\"$v\"";
  if (isset($valider)){
 
    $conn->exec($req1);

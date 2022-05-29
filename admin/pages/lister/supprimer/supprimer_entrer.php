@@ -5,7 +5,7 @@ include("../../connexion_PDO.php");
 $v=$_GET['id'];
 
 
- $req="DELETE FROM entrer WHERE id_de_preduit =$v";
+ $req="DELETE FROM products WHERE product_id =$v";
  $conn->exec($req);
 
  

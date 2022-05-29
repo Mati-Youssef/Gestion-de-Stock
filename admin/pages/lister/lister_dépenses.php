@@ -51,7 +51,7 @@
    $reponse=$conn->query($req);
    
     ?>
-   
+   <h1>Liste des fournisseurs:</h1><hr>
     <table class="content-table" >
    
     <?php 
@@ -59,7 +59,7 @@
 
 
 
-    echo "<tr><th>année</th><th>mois</th><th>id_produit</th><th>quantité</th>";
+    echo "<tr><th>nom</th><th>prenom</th><th>numèro de telephone</th><th>CIN</th>";
     
    
      while ($user=$reponse->fetch()) {
@@ -67,12 +67,15 @@
 
 	 echo "<tr>";
       echo "<td>";
-	 echo $user['année']."</td><td>".$user['mois']."</td><td>".$user['id_produit']."</td><td>".$user['quantité']."</td>";
+	 echo $user['nom_four']."</td><td>".$user['prenom_four']."</td><td>".$user['N_tele_four']."</td><td>".$user['cin_four']."</td>";
 	  ?>
-	   <td><button class="btn btn-outline-danger" onclick="confirmer(<?php echo $user[0] ?>)">supprimer</button></td>
+	   <td><button class="btn btn-outline-danger" onclick="confirmer(<?php echo $user['id_four'] ?>)">supprimer</button></td>
 	  	<?php
-     echo "<td><a  href='modifier/modifier_dépenses.php?id=$user[4]'><button class=\"btn btn-outline-success\">modifier</button></a></td></tr>";
- }?>
+	  	$idff=$user[4];
+     echo "<td><a  href='modifier/modifier_dépenses.php?id=$idff'><button class=\"btn btn-outline-success\">modifier</button></a></td>";
+     ?> 
+<td><a href="/FPO-fifel/admin/pages/DEPONCE.php"><button class="btn btn-outline-primary">ajouter</button></a></td></tr>
+<?php }?>
 <script type="text/javascript">
   	
 function confirmer(v){

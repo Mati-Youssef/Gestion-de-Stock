@@ -41,6 +41,7 @@
   <title></title>
 </head>
 <body id="body-pd">
+  <h1 style="border-bottom: 2px solid black; width: 25%">liste des clients : </h1> <br>
         <?php include('../../include/head.php'); ?>
         <?php 
 
@@ -58,7 +59,7 @@
 
 
 
-    echo "<tr><th>id_client</th><th>nom_prenom</th><th>cin</th><th>N_télé</th><th>N_fix</th><th>nom_de_magazine</th></tr>";
+    echo "<tr><th>Id de client</th><th>Nom et prenom</th><th>CIN</th><th>Numéro de téléphone</th><th>Email</th><th>mot de passe</th></tr>";
     
    
      while ($user=$reponse->fetch()) {
@@ -66,11 +67,13 @@
 
    echo "<tr>";
      echo "<td>";
-   echo $user['id_client']."</td><td>".$user['nom_prenom']."</td><td>".$user['cin']."</td><td>".$user['N_télé']."</td><td>".$user['N_fix']."</td><td>".$user['nom_de_magazine']."</td>";
+   echo $user['id_client']."</td><td>".$user['nom_prenom']."</td><td>".$user['cin']."</td><td>".$user['N_télé']."</td><td>".$user['Email']."</td><td>".$user['password']."</td>";
     ?>
      <td><button class="btn btn-outline-danger" onclick="confirmer(<?php echo $user[0] ?>)">supprimer</button></td>
       <?php
-     echo "<td><a  href='modifier/modifier_client.php?id=$user[0]'><button class=\"btn btn-outline-success\">modifier</button></a></td></tr>";
+     echo "<td><a  href='modifier/modifier_client.php?id=$user[0]'><button class=\"btn btn-outline-success\">modifier</button></a></td>";?>
+ <td><a  href='../CL.php'><button class="btn btn-outline-primary">ajouter</button></a></td></tr>
+     <?php
  }?>
 <script type="text/javascript">
     

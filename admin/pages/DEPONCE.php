@@ -10,8 +10,7 @@
  @$valider=$_POST["valider"];
 
 if (isset($valider)) {
-    
-    $req="INSERT INTO dépenses(année,mois,id_produit,quantité) VALUES(?,?,?,?)";
+    $req="INSERT INTO dépenses(nom_four,prenom_four,cin_four,N_tele_four) VALUES(?,?,?,?)";
     $insert=$conn->prepare($req); 
     $insert->execute(array($année,$Mois,$idproduit,$quantité));
     $conn=NULL;
@@ -73,7 +72,7 @@ body{
 }
   </style>
   
-  <title>Deponses</title>
+  <title>ajouter un fournisseur</title>
 </head>
 <body id="body-pd">
         <?php include('../include/head.php'); ?>
@@ -82,35 +81,27 @@ body{
 <!--form ------------------------------------------------>
 <form method="post" action="" class="needs-validation" style=" margin:180px 20%" novalidate>
   <fieldset>
-  <h3>Espace de dépenses</h3> <br>
+  <h3>Ajouter un fournisseur</h3> <br>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip01">l'année :</label>
-      <input type="text" class="form-control" name="année" placeholder="l'année ?" value="" required>
-      <div class="valid-tooltip">
-        Looks good!
-      </div>
+      <label for="validationTooltip01">nom:</label>
+      <input type="text" class="form-control" name="année" placeholder="nom ?"  required>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip02">Mois :</label>
-      <input type="text" class="form-control" name="Mois" placeholder="Mois ?" value="" required>
-      <div class="valid-tooltip">
-        Looks good!
-      </div>
+      <label for="validationTooltip02">prenom :</label>
+      <input type="text" class="form-control" name="Mois" placeholder="prenom ?"  required>
     </div>
     <div class="col-md-4 mb-3">
-      <label for="validationTooltipUsername">ID de Produit</label>
-      <input type="text" class="form-control" name="idproduit" placeholder="Entre id.." value="" required>
-        <div class="invalid-tooltip">
-          Please choose a unique and valid username.
-        </div>
+      <label for="validationTooltipUsername">CIN</label>
+      <input type="text" class="form-control" name="idproduit" placeholder="Entrer CIN.." value="" required>
+        
       </div>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <label for="validationTooltip05">Quantité :</label>
-      <input type="number" class="form-control" name="quantité" placeholder="quantité ?" required>
+      <label for="validationTooltip05">Numero de telephone.. :</label>
+      <input type="number" class="form-control" name="quantité" placeholder="Numero de tele ?" required>
     </div>
     <input id="va" value="Ajoute" name="valider" class="btn btn-primary" type="submit">
   </div>

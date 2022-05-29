@@ -40,12 +40,13 @@
 
 	<title></title>
 </head>
+<h1 style="border-bottom: 2px solid black; width: 25%">liste des produits :</h1><hr>
 <body id="body-pd">
         <?php include('../../include/head.php'); ?>
         <?php 
 
         include("../connexion_PDO.php");
-   $req="SELECT * FROM entrer";
+   $req="SELECT * FROM products";
 
    $reponse=$conn->query($req);
    
@@ -58,7 +59,7 @@
 
 
 
-    echo "<tr><th>id_de_preduit</th><th>id_de_categourie</th><th>nom_de_preduit</th><th>date_d_entrer</th><th>date_d_experation</th><th>quantité</th><th>prix</th></tr>";
+    echo "<tr><th>id de produit</th><th>nom de preduit</th><th>prix</th><th>description des produits</th><th>résumer à propos des produits</th><th>notation</th><th>quantité</th><th>dete d'entrer</th><th>photo</th></tr>";
     
    
      while ($user=$reponse->fetch()) {
@@ -66,12 +67,20 @@
 
 	 echo "<tr>";
      echo "<td>";
-	 echo $user['id_de_preduit']."</td><td>".$user['id_de_categourie']."</td><td>".$user['nom_de_preduit']."</td><td>".$user['date_d_entrer']."</td><td>".$user['date_d_experation']."</td><td>".$user['quantité']."</td><td>".$user['prix']."</td>";
+	 echo $user['product_id']."</td><td>".$user['product_name']."</td><td>".$user['product_price']."</td><td>".$user['product_details']."</td><td>".$user['product_summary']."</td><td>".$user['product_ratings']."</td><td>".$user['quantité']."<td>".$user['date_entrer']."</td>";
 	  ?>
+    <td><img style="width: 50px;height: 50px;" src="../../../<?php echo $user['product_image']; ?>"></td>
 	   <td><button class="btn btn-outline-danger" onclick="confirmer(<?php echo $user[0] ?>)">supprimer</button></td>
 	  	<?php
-     echo "<td><a  href='modifier/modifier_entrer.php?id=$user[0]'><button class=\"btn btn-outline-success\">modifier</button></a></td></tr>";
- }?>
+
+
+ 
+
+
+     echo "<td><a  href='modifier/modifier_entrer.php?id=$user[0]'><button class=\"btn btn-outline-success\">modifier</button></a></td>";?>
+      <td><a  href='../Entrer.php'><button class="btn btn-outline-primary">ajouter</button></a></td></tr>
+      
+      <?php }?>
 <script type="text/javascript">
   	
 function confirmer(v){
@@ -86,6 +95,9 @@ function confirmer(v){
 
 
   </script>
+
+  
+ 
 
 <!--===== MAIN JS =====-->
         <script src="../assets/js/main.js"></script>
