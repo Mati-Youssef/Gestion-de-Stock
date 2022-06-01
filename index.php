@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
 <body>
-   <?php include_once "includes/header.php" ?>
+   <?php  include_once "includes/header.php" ?>
    
    <div id="mainImage">
        <img id="mainImage" src="images/photo104.png" alt="Main Image">
